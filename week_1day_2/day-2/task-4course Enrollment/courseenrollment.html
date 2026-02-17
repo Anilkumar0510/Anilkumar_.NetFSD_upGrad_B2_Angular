@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment</title>
+</head>
+<body>
+
+<header>
+</header>
+
+<main>
+
+    <h2>Course Enrollment Form</h2>
+    
+
+    <form action="#" method="post">
+        <p>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+
+       
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="course">Choose Course:</label><br>
+            <input list="courses" id="course" name="course" required>
+
+            <datalist id="courses">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript ">
+                <option value="Python">
+                <option value="AWS Cloud">
+            </datalist>
+        </p>
+        <p>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="15" max="60" required>
+        </p>
+    <section>
+        <p>Enrollment Completion:</p>
+        <progress value="60" max="100"></progress>
+    </section>
+        <p>
+            <label for="hours">Preferred Study Hours per Week:</label><br>
+            <input type="range" id="hours" name="hours" min="1" max="40">
+        </p>
+
+        <p>
+            <label for="skill">Your Skill Level(1=Beginner 10=Advanced):</label><br>
+            <meter id="skill" value="0.6" min="0" max="1">60%</meter>
+        </p>
+
+        <p>
+            <input type="submit" value="Enroll Now">
+        </p>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>© 2026 Online Learning Platform</p>
+</footer>
+
+</body>
+</html>
