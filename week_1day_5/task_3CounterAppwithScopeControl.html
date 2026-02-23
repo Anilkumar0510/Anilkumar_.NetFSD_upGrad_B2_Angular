@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter APP WIth Scope Control</title>
+    <style>
+        button{
+            background-color: blue;
+        }
+        button:hover{
+            background-color: green;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="Increment">Increment</button>
+    <p id="para">0</p>
+    <button id="Reset">Reset</button>
+    <script>
+        const Increment=document.getElementById("Increment");
+        const Reset=document.getElementById("Reset");
+        if(Increment.addEventListener("click",function(){document.getElementById("para").innerText++;}));
+        if(Reset.addEventListener("click",function(){document.getElementById("para").innerText=0;}));
+    </script>
+</body>
+</html>

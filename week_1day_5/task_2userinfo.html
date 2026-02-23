@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Display</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 50px;
+            text-align: center;
+            background-color: aqua;
+        }
+        button{
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: blue;
+
+        }
+        button:hover{
+            background-color:green;
+            color:white;
+        }
+        p{
+            font-size: 18px;
+            color: black;
+        }
+        h2{
+            color: rgb(232, 162, 22);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Information</h2>
+    <button onclick="ShowInfo()">Show User Info</button>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="city"></p>
+    <script>
+        function displayUserInfo(userObj) {
+            document.getElementById("name").innerText = "Name: " + userObj.name;
+            document.getElementById("age").innerText = "Age: " + userObj.age;
+            document.getElementById("city").innerText = "City: " + userObj.city;
+        }
+        function ShowInfo(){
+        var user={
+            name:"Anil Kumar",
+            age:24,
+            city:"HYD"
+        };
+         displayUserInfo(user);
+        }
+    </script>
+    
+</body>
+</html>

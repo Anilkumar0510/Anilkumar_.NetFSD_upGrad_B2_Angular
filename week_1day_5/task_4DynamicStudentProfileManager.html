@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+    <style>
+        .student-card {
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #765050;
+            box-shadow: 0 4px 8px rgba(223, 180, 180, 0.2);
+            font-family: Arial, sans-serif;
+        }
+
+        .student-card h2 {
+            text-align: center;
+            color: white;
+        }
+
+        .student-card p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .input-section {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        input {
+            padding: 6px;
+            width: 120px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: green;
+            color: #1f2021;
+        }
+        let{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div id="profile"></div>
+
+<div class="input-section">
+    <input type="number" id="marksInput" placeholder="Enter new marks">
+    <button onclick="getMarks()">Update Marks</button>
+</div>
+
+<script>
+    let student = {
+        name: "Anil Varma",
+        rollNo: 110,
+        marks: 83
+    };
+
+    function updateStudentProfile(studentObj) {
+        let profileDiv = document.getElementById("profile");
+        profileDiv.innerHTML = `
+            <div class="student-card">
+                <h2>Student Profile</h2>
+                <p><strong>Name:</strong> ${studentObj.name}</p>
+                <p><strong>Roll No:</strong> ${studentObj.rollNo}</p>
+                <p><strong>Marks:</strong> ${studentObj.marks}</p>
+            </div>
+        `;
+    }
+    function getMarks() {
+        let newMarks = document.getElementById("marksInput").value;
+        
+        if (newMarks === "") {
+            alert("Please enter marks!");
+            return;
+        }
+
+        updateMarks(Number(newMarks));
+    }
+    function updateMarks(newMarks) {
+        student.marks = newMarks;
+        updateStudentProfile(student); 
+    }
+    updateStudentProfile(student);
+</script>
+
+</body>
+</html>
